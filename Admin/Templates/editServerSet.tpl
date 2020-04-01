@@ -201,6 +201,7 @@ function refresh(tz) {
 						<td><?php echo CONF_SERV_NTRTIME ?> <em class="tooltip">?<span class="classic"><?php echo CONF_SERV_NTRTIME_TOOLTIP ?></span></em></td>
 						<td>
 							<select name="nature_regtime">
+								<option value="3600" <?php if(NATURE_REGTIME == 28800) echo "selected";?>>1 hour</option>
 								<option value="28800" <?php if(NATURE_REGTIME == 28800) echo "selected";?>>8 hours</option>
 								<option value="36000" <?php if(NATURE_REGTIME == 36000) echo "selected";?>>10 hours</option>
 								<option value="43200" <?php if(NATURE_REGTIME == 43200) echo "selected";?>>12 hours</option>

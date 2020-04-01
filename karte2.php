@@ -11,6 +11,7 @@
 use App\Utils\AccessLogger;
 
 include_once("GameEngine/Village.php");
+include_once("tools/short_number_format.php");
 AccessLogger::logRequest();
 
 $building->procBuild($_GET);

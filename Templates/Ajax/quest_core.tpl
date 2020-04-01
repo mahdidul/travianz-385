@@ -17,6 +17,7 @@
 #################################################################################
 
 include_once("GameEngine/Village.php");
+include_once("tools/short_number_format.php");
 include("GameEngine/Data/cp.php");
 
 $user_sanitized = $database->escape($_SESSION['username']);

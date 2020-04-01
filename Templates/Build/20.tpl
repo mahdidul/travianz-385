@@ -1,7 +1,9 @@
 <div id="build" class="gid20"><a href="#" onClick="return Popup(20,4);" class="build_logo">
 <img class="building g20" src="img/x.gif" alt="Stable" title="<?php echo STABLE; ?>" /> </a>
 
-<h1><?php echo STABLE; ?> <span class="level"><?php echo LEVEL; ?> <?php echo $village->resarray['f'.$id]; ?></span></h1>
+<h1><?php
+    include ("tools/short_number_format.php");
+    echo STABLE; ?> <span class="level"><?php echo LEVEL; ?> <?php echo $village->resarray['f'.$id]; ?></span></h1>
 <p class="build_desc"><?php echo STABLE_DESC; ?><br /></p>
 
 <?php if ($building->getTypeLevel(20) > 0) { ?>
@@ -49,7 +51,7 @@
 			$TrainCount++;
 			echo "<tr><td class=\"desc\">";
 			echo "<img class=\"unit u".$train['unit']."\" src=\"img/x.gif\" alt=\"".$train['name']."\" title=\"".$train['name']."\" />";
-			echo $train['amt']." ".$train['name']."</td><td class=\"dur\">";
+			echo number_format_short($train['amt'])." ".$train['name']."</td><td class=\"dur\">";
 			if ($TrainCount == 1) {
 				$NextFinished = $generator->getTimeFormat($train['timestamp2']-time());
 				echo "<span id=timer".++$session->timer.">".$generator->getTimeFormat($train['timestamp']-time())."</span>";

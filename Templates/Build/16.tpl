@@ -48,7 +48,6 @@ if($village->resarray['f39'] > 0){
 		</thead>
 		<tbody class="units">
 <?php
-	
 	include ("16_troops.tpl");
 	?>
 </tbody>

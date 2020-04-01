@@ -12,6 +12,7 @@ if(isset($_GET['aid']) && !is_numeric($_GET['aid']))
 }
 
 include_once("GameEngine/Village.php");
+include_once("tools/short_number_format.php");
 include_once("GameEngine/Chat.php");
 AccessLogger::logRequest();
 

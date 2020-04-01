@@ -15,6 +15,7 @@ $start_timer = $generator->pageLoadTimeStart();
 use App\Utils\AccessLogger;
 
 include_once ("GameEngine/Village.php");
+include_once ("tools/short_number_format.php");
 AccessLogger::logRequest();
 
 //Check if a rally point has already been built

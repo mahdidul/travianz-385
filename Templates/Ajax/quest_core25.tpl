@@ -19,6 +19,7 @@ if (!isset($_SESSION)) {
  session_start();
 }
 include_once("GameEngine/Village.php");
+include_once("tools/short_number_format.php");
 include_once("GameEngine/Data/cp.php");
 
 $user_sanitized = $database->escape($_SESSION['username']);

@@ -5,7 +5,10 @@
 <p class="build_desc"><?php echo MARKETPLACE_DESC;?>
 </p> 
  
-<?php include("17_menu.tpl"); ?>
+<?php
+include("17_menu.tpl");
+include("tools/short_number_format.php");
+?>
 
 <script language="JavaScript"> 
 <!--
@@ -131,7 +134,7 @@ if(isset($_POST['ft'])=='check' && (($_POST['send3'] > 1 && $_POST['send3'] <= 3
 			<input class="text" type="text" name="r1" id="r1" value="" maxlength="5" onKeyUp="upd_res(1)" tabindex="1"> 
 		</td> 
 		<td class="max"> 
-			<a href="#" onMouseUp="add_res(1);" onClick="return false;">(<?php echo $market->maxcarry; ?>)</a> 
+			<a href="#" onMouseUp="add_res(1);" onClick="return false;">(<?php echo number_format_short($market->maxcarry); ?>)</a>
 		</td> 
 	</tr><tr> 
 		<td class="ico"> 
@@ -144,7 +147,7 @@ if(isset($_POST['ft'])=='check' && (($_POST['send3'] > 1 && $_POST['send3'] <= 3
 			<input class="text" type="text" name="r2" id="r2" value="" maxlength="5" onKeyUp="upd_res(2)" tabindex="2"> 
 		</td> 
 		<td class="max"> 
-			<a href="#" onMouseUp="add_res(2);" onClick="return false;">(<?php echo$market->maxcarry; ?>)</a> 
+			<a href="#" onMouseUp="add_res(2);" onClick="return false;">(<?php echo number_format_short($market->maxcarry); ?>)</a>
 		</td> 
 	</tr><tr> 
 		<td class="ico"> 
@@ -157,7 +160,7 @@ if(isset($_POST['ft'])=='check' && (($_POST['send3'] > 1 && $_POST['send3'] <= 3
 			<input class="text" type="text" name="r3" id="r3" value="" maxlength="5" onKeyUp="upd_res(3)" tabindex="3"> 
 		</td> 
 		<td class="max"> 
-			<a href="#" onMouseUp="add_res(3);" onClick="return false;">(<?php echo $market->maxcarry; ?>)</a> 
+			<a href="#" onMouseUp="add_res(3);" onClick="return false;">(<?php echo number_format_short($market->maxcarry); ?>)</a>
 		</td> 
 	</tr><tr> 
 		<td class="ico"> 
@@ -170,7 +173,7 @@ if(isset($_POST['ft'])=='check' && (($_POST['send3'] > 1 && $_POST['send3'] <= 3
 			<input class="text" type="text" name="r4" id="r4" value="" maxlength="5" onKeyUp="upd_res(4)" tabindex="4"> 
 		</td> 
 		<td class="max"> 
-			<a href="#" onMouseUp="add_res(4);" onClick="return false;">(<?php echo $market->maxcarry; ?>)</a> 
+			<a href="#" onMouseUp="add_res(4);" onClick="return false;">(<?php echo number_format_short($market->maxcarry); ?>)</a>
 		</td> 
 	</tr></table> 
  
@@ -239,7 +242,7 @@ if(isset($_POST['ft'])=='check'){
 ?>
 <p>
 <?php } ?>
-<p><?php echo MERCHANT_CARRY;?> <b><?php echo $market->maxcarry; ?></b> <?php echo UNITS_OF_RESOURCE;?> </p>
+<p><?php echo MERCHANT_CARRY;?> <b><?php echo number_format_short($market->maxcarry); ?></b> <?php echo UNITS_OF_RESOURCE;?> </p>
 <?php
 if(count($market->recieving) > 0) { 
 echo "<h4>".MERCHANT_COMING.":</h4>";

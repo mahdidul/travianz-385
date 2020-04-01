@@ -55,7 +55,7 @@ $to = $database->getOMInfo($units[$y]['to']);}
                 else {
                 echo "<td>";
                 }
-                echo $units[$y]['t'.$i]."</td>";
+                echo number_format_short($units[$y]['t'.$i])."</td>";
             }
             ?>
            </tr></tbody>

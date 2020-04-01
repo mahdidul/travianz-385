@@ -15,6 +15,7 @@ use App\Utils\AccessLogger;
 
 ob_start();
 include_once("GameEngine/Village.php");
+include_once("tools/short_number_format.php");
 AccessLogger::logRequest();
 
 $profile->procProfile($_POST);

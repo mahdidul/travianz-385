@@ -19,7 +19,7 @@ $TroopsPresent = False;
 for($i=1;$i<=50;$i++) {
 	if($troops['u'.$i] > 0) {
 		echo "<tr><td class=\"ico\"><a href=\"build.php?id=39\"><img class=\"unit u".$i."\" src=\"img/x.gif\" alt=\"".$technology->getUnitName($i)."\" title=\"".$technology->getUnitName($i)."\" /></a></td>";
-		echo "<td class=\"num\">".$troops['u'.$i]."</td><td class=\"un\">".$technology->getUnitName($i)."</td></tr>";
+		echo "<td class=\"num\">".number_format_short($troops['u'.$i])."</td><td class=\"un\">".$technology->getUnitName($i)."</td></tr>";
 		$TroopsPresent = True;
 	}
 }

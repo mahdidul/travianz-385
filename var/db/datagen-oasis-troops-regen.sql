@@ -40,16 +40,16 @@ SET @noVillage = ((SELECT id FROM %PREFIX%oids LIMIT 1) = -1);
 SET @firstVillage = (SELECT id FROM %PREFIX%oids LIMIT 1);
 
 -- minimum and maximum number of units for oasis with "high" field set to 0
-SET @minUnitsForOasis0 = 15;
-SET @maxUnitsForOasis0 = 30;
+SET @minUnitsForOasis0 = 15 * %NATURE_REG_TIME%;
+SET @maxUnitsForOasis0 = 30 * %NATURE_REG_TIME%;
 
 -- minimum and maximum number of units for oasis with "high" field set to 1
-SET @minUnitsForOasis1 = 50;
-SET @maxUnitsForOasis1 = 70;
+SET @minUnitsForOasis1 = 50 * %NATURE_REG_TIME%;
+SET @maxUnitsForOasis1 = 70 * %NATURE_REG_TIME%;
 
 -- minimum and maximum number of units for oasis with "high" field set to 2
-SET @minUnitsForOasis2 = 90;
-SET @maxUnitsForOasis2 = 120;
+SET @minUnitsForOasis2 = 90 * %NATURE_REG_TIME%;
+SET @maxUnitsForOasis2 = 120 * %NATURE_REG_TIME%;
 
 
 

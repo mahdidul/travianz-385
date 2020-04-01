@@ -16,6 +16,7 @@ use App\Utils\AccessLogger;
 
 if(isset($_GET['z']) && !is_numeric($_GET['z'])) die('Hacking Attempt');
 include_once("GameEngine/Village.php");
+include_once("tools/short_number_format.php");
 AccessLogger::logRequest();
 
 if(isset($_GET['newdid'])) {

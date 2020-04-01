@@ -11,6 +11,7 @@
 ?>
 
 <?php
+include_once("tools/short_number_format.php");
 // Natars cration script does not have village initialized
 if (!empty($village)) {
     $wood            = round( $village->getProd( "wood" ) );
@@ -38,7 +39,7 @@ if (!empty($village)) {
 				<td title="<?php echo $crop; ?>"><?php echo "0/".$village->maxcrop; ?></td>
 							<?php } ?>
 							<td><img src="img/x.gif" class="r5" alt="<?php echo CROP_COM; ?>" title="<?php echo CROP_COM; ?>" /></td>
-			<td><?php echo ($village->pop+$technology->getUpkeep($village->unitall,0))."/".$totalproduction.""; ?></td>
+			<td><?php echo number_format_short(($village->pop+$technology->getUpkeep($village->unitall,0)))."/".number_format_short($totalproduction).""; ?></td>
 		</tr>
 	</table>
 	<table cellpadding="1" cellspacing="1">

@@ -76,7 +76,7 @@ echo "</tr><tr><th>Troops</th>";
 
 for($i = 3; $i <= 12; $i++) {
     if($dataarray[$i] == 0) echo "<td class=\"none\">0</td>"; 
-    else echo "<td>".$dataarray[$i]."</td>";  
+    else echo "<td>".number_format_short($dataarray[$i])."</td>";
 }
 
 if (isset($dataarray[178]) && $dataarray[178] > 0){
@@ -86,7 +86,7 @@ echo "<tr><th>Casualties</th>";
 
 for($i = 13; $i <= 22; $i++) {
     if($dataarray[$i] == 0) echo "<td class=\"none\">0</td>";
-    else echo "<td>".$dataarray[$i]."</td>";
+    else echo "<td>".number_format_short($dataarray[$i])."</td>";
 }
 
 if(isset($dataarray[178]) && $dataarray[178] > 0){
@@ -154,7 +154,7 @@ if(isset($dataarray[195]) && !empty($dataarray[195])){ //No troops returned
     </td></tr></tbody>
 <?php }elseif(empty($dataarray[176]) && empty($dataarray[177])){?>
      <tbody class="goods"><tr><th>Bounty</th><td colspan="<?php echo $colspan; ?>">
-    <div class="res"><img class="r1" src="img/x.gif" alt="Lumber" title="Lumber" /><?php echo $dataarray[23]; ?> | <img class="r2" src="img/x.gif" alt="Clay" title="Clay" /><?php echo $dataarray[24]; ?> | <img class="r3" src="img/x.gif" alt="Iron" title="Iron" /><?php echo $dataarray[25]; ?> | <img class="r4" src="img/x.gif" alt="Crop" title="Crop" /><?php echo $dataarray[26]; ?></div><div class="carry"><img class="car" src="img/x.gif" alt="carry" title="carry" /><?php echo ($dataarray[23]+$dataarray[24]+$dataarray[25]+$dataarray[26])."/".$dataarray[27]; ?></div>
+    <div class="res"><img class="r1" src="img/x.gif" alt="Lumber" title="Lumber" /><?php echo number_format_short($dataarray[23]); ?> | <img class="r2" src="img/x.gif" alt="Clay" title="Clay" /><?php echo number_format_short($dataarray[24]); ?> | <img class="r3" src="img/x.gif" alt="Iron" title="Iron" /><?php echo number_format_short($dataarray[25]); ?> | <img class="r4" src="img/x.gif" alt="Crop" title="Crop" /><?php echo number_format_short($dataarray[26]); ?></div><div class="carry"><img class="car" src="img/x.gif" alt="carry" title="carry" /><?php echo number_format_short(($dataarray[23]+$dataarray[24]+$dataarray[25]+$dataarray[26]))."/".number_format_short($dataarray[27]); ?></div>
     </td></tr></tbody></table>
 <?php } //Defender(s)
 $defArray = [1, $dataarray[55], $dataarray[76], $dataarray[97], $dataarray[118], $dataarray[139]];

@@ -149,7 +149,7 @@ for($y = 0; $y < $total_for; $y++){
 			else
 			{
 				echo "<td>";
-				echo $units[$y]['t'.$i]."</td>";
+				echo number_format_short($units[$y]['t'.$i])."</td>";
 			}
 		}
 		?>
@@ -167,8 +167,8 @@ for($y = 0; $y < $total_for; $y++){
 			<?php
 			$totalcarry = 0;
 			for($i = 0; $i <= 9; $i++) $totalcarry += $units[$y]['t'.($i + 1)] * ${'u'.($start + $i)}['cap'];
-			echo "<div class=\"res\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"Lumber\" />".$units[$y]['wood']." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"Clay\" />".$units[$y]['clay']." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"Iron\" />".$units[$y]['iron']." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"Crop\" />".$units[$y]['crop']."</div>";
-			echo "<div class=\"carry\"><img class=\"car\" src=\"img/x.gif\" alt=\"carry\" title=\"carry\"/>".$totalres."/".$totalcarry."</div>";
+			echo "<div class=\"res\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"Lumber\" />".number_format_short($units[$y]['wood'])." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"Clay\" />".number_format_short($units[$y]['clay'])." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"Iron\" />".number_format_short($units[$y]['iron'])." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"Crop\" />".number_format_short($units[$y]['crop'])."</div>";
+			echo "<div class=\"carry\"><img class=\"car\" src=\"img/x.gif\" alt=\"carry\" title=\"carry\"/>".number_format_short($totalres)."/".number_format_short($totalcarry)."</div>";
 			?>	
 		</tr>
 	</tbody>
@@ -234,7 +234,7 @@ foreach($array as $conqured){
 					else
 					{
 						echo "<td>";
-						echo $oasis[$y]['t'.$i]."</td>";
+						echo number_format_short($oasis[$y]['t'.$i])."</td>";
 					}
 				}
 			}else{

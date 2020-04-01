@@ -1,5 +1,6 @@
 <?php
 include("next.tpl");
+include("tools/short_number_format.php");
 ?>
 <div id="build" class="gid10"><a href="#" onClick="return Popup(10,4);" class="build_logo">
 	<img class="building g10" src="img/x.gif" alt="Warehouse" title="<?php echo WAREHOUSE; ?>" />
@@ -11,7 +12,7 @@ include("next.tpl");
 	<table cellpadding="1" cellspacing="1" id="build_value">
 	<tr>
 		<th><?php echo CURRENT_CAPACITY; ?></th>
-		<td><b><?php echo $bid10[$village->resarray['f'.$id]]['attri']*STORAGE_MULTIPLIER; ?></b> <?php echo RESOURCE_UNITS; ?></td>
+		<td><b><?php echo number_format_short($bid10[$village->resarray['f'.$id]]['attri']*STORAGE_MULTIPLIER); ?></b> <?php echo RESOURCE_UNITS; ?></td>
 	</tr>
 	<tr>
 <?php 
@@ -20,12 +21,12 @@ include("next.tpl");
 		if($next<=20){
         ?>
 		<th><?php echo CAPACITY_LEVEL; ?> <?php echo $next ?>:</th>
-		<td><b><?php echo $bid10[$next]['attri']*STORAGE_MULTIPLIER; ?></b> <?php echo RESOURCE_UNITS; ?></td>
+		<td><b><?php echo number_format_short($bid10[$next]['attri']*STORAGE_MULTIPLIER); ?></b> <?php echo RESOURCE_UNITS; ?></td>
         <?php
             }else{
 		?>
 		<th><?php echo CAPACITY_LEVEL; ?> 20:</th>
-		<td><b><?php echo $bid10[20]['attri']*STORAGE_MULTIPLIER; ?></b> <?php echo RESOURCE_UNITS; ?></td>
+		<td><b><?php echo number_format_short($bid10[20]['attri']*STORAGE_MULTIPLIER); ?></b> <?php echo RESOURCE_UNITS; ?></td>
 		<?php
 			}
 			}
