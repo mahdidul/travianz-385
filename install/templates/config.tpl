@@ -58,7 +58,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
                 <span class="f9 c6">Server speed:</span>
             </td>
             <td>
-                <input name="speed" type="text" id="speed" value="1" size="2">
+                <input name="speed" type="text" id="speed" value="50000" size="2">
             </td>
         </tr>
         <tr>
@@ -66,7 +66,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
                 <span class="f9 c6">Troop speed:</span>
             </td>
             <td width="140">
-                <input type="text" name="incspeed" id="incspeed" value="1" size="2">
+                <input type="text" name="incspeed" id="incspeed" value="1000" size="2">
             </td>
         </tr>
         <tr>
@@ -74,7 +74,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
                 <span class="f9 c6">Evasion speed:</span>
             </td>
             <td>
-                <input name="evasionspeed" type="text" id="evasionspeed" value="1" size="2">
+                <input name="evasionspeed" type="text" id="evasionspeed" value="50000" size="2">
             </td>
         </tr>
         <tr>
@@ -82,32 +82,32 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
                 <span class="f9 c6">Trader capacity (1 = 1x...):</span>
             </td>
             <td width="140">
-                <input type="text" name="tradercap" id="tradercap" value="1" size="2">
+                <input type="text" name="tradercap" id="tradercap" value="50000" size="2">
             </td>
         </tr>
         <tr>
             <td><span class="f9 c6">Cranny capacity:</span></td>
-            <td width="140"><input type="text" name="crannycap" id="crannycap" value="1" size="2"></td>
+            <td width="140"><input type="text" name="crannycap" id="crannycap" value="50000" size="2"></td>
         </tr>
         <tr>
             <td><span class="f9 c6">Trapper capacity:</span></td>
-            <td width="140"><input type="text" name="trappercap" id="trappercap" value="1" size="2"></td>
+            <td width="140"><input type="text" name="trappercap" id="trappercap" value="50000" size="2"></td>
         </tr>
         <tr>
             <td><span class="f9 c6">Natars Units Multiplier:</span></td>
-            <td width="140"><input type="text" name="natars_units" id="natars_units" value="100" size="3"></td>         
+            <td width="140"><input type="text" name="natars_units" id="natars_units" value="50000" size="3"></td>
         </tr>
         <tr>
         	<td><span class="f9 c6">Natars Spawn (Days):</span></td>
-            <td width="140"><input type="text" name="natars_spawn_time" id="natars_spawn_time" value="260" size="3"></td>
+            <td width="140"><input type="text" name="natars_spawn_time" id="natars_spawn_time" value="1" size="3"></td>
         </tr>
         <tr>
         	<td><span class="f9 c6">WW spawn (Days):</span></td>
-            <td width="140"><input type="text" name="natars_ww_spawn_time" id="natars_ww_spawn_time" value="260" size="3"></td>
+            <td width="140"><input type="text" name="natars_ww_spawn_time" id="natars_ww_spawn_time" value="1" size="3"></td>
         </tr>
         <tr>
         	<td><span class="f9 c6">WW building plan spawn (Days):</span></td>
-            <td width="140"><input type="text" name="natars_ww_building_plan_spawn_time" id="natars_ww_building_plan_spawn_time" value="260" size="3"></td>           
+            <td width="140"><input type="text" name="natars_ww_building_plan_spawn_time" id="natars_ww_building_plan_spawn_time" value="1" size="3"></td>
         </tr>      
         <tr>
             <td><span class="f9 c6">World size:</span></td>
@@ -180,9 +180,11 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Nature troops regeneration time:</span></td>
             <td>
                 <select name="nature_regtime">
+                    <option value="60" selected="selected">1 minute</option>
+                    <option value="3600">1 hour</option>
                     <option value="28800">8 hours</option>
                     <option value="36000">10 hours</option>
-                    <option value="43200" selected="selected">12 hours</option>
+                    <option value="43200">12 hours</option>
                     <option value="57600">16 hours</option>
                     <option value="72000">20 hours</option>
                     <option value="86400">24 hours</option>
@@ -191,19 +193,19 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
         	<td><span class="f9 c6">Oasis wood production multiplier:</span></td>
-            <td width="140"><input type="text" name="oasis_wood_multiplier" id="oasis_wood_multiplier" value="40"></td>                    
+            <td width="140"><input type="text" name="oasis_wood_multiplier" id="oasis_wood_multiplier" value="200000"></td>
         </tr>
         <tr>
         	<td><span class="f9 c6">Oasis clay production multiplier:</span></td>
-            <td width="140"><input type="text" name="oasis_clay_multiplier" id="oasis_clay_multiplier" value="40"></td>
+            <td width="140"><input type="text" name="oasis_clay_multiplier" id="oasis_clay_multiplier" value="200000"></td>
         </tr>
         <tr>
         	<td><span class="f9 c6">Oasis iron production multiplier:</span></td>
-            <td width="140"><input type="text" name="oasis_iron_multiplier" id="oasis_iron_multiplier" value="40"></td>
+            <td width="140"><input type="text" name="oasis_iron_multiplier" id="oasis_iron_multiplier" value="200000"></td>
         </tr>
         <tr>
         	<td><span class="f9 c6">Oasis crop production multiplier:</span></td>
-            <td width="140"><input type="text" name="oasis_crop_multiplier" id="oasis_crop_multiplier" value="40"></td>
+            <td width="140"><input type="text" name="oasis_crop_multiplier" id="oasis_crop_multiplier" value="200000"></td>
         </tr>
         <tr>
         <tr class="hover">
@@ -211,30 +213,30 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td>
                 <select name="medalinterval">
                     <option value="0">none</option>
-                    <option value="(3600*24)">1 day</option>
+                    <option value="(3600*24)" selected="selected">1 day</option>
                     <option value="(3600*24*2)">2 days</option>
                     <option value="(3600*24*3)">3 days</option>
                     <option value="(3600*24*4)">4 days</option>
                     <option value="(3600*24*5)">5 days</option>
                     <option value="(3600*24*6)">6 days</option>
-                    <option value="(3600*24*7)" selected="selected">7 days</option>
+                    <option value="(3600*24*7)">7 days</option>
                 </select>
             </td>
         </tr>
         <tr>
             <td><span class="f9 c6">Storage Multipler:</span></td>
-            <td width="140"><input type="text" name="storage_multiplier" id="storage_multiplier" value="1"></td>
+            <td width="140"><input type="text" name="storage_multiplier" id="storage_multiplier" value="50000"></td>
         </tr>
         <tr>
             <td><span class="f9 c6">Tourn Threshold:</span></td>
-            <td width="140"><input type="text" name="ts_threshold" id="ts_threshold" value="20"></td>
+            <td width="140"><input type="text" name="ts_threshold" id="ts_threshold" value="50000"></td>
         </tr>
         <tr>
             <td><span class="f9 c6">Great Workshop:</span></td>
             <td>
                 <select name="great_wks">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -242,8 +244,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">ww:</span></td>
             <td>
                 <select name="ww">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -251,8 +253,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Show Natars in Statistics:</span></td>
             <td>
                 <select name="show_natars">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -277,8 +279,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Display oasis in profile:</span></td>
             <td>
                 <select name="new_functions_oasis">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -286,8 +288,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Alliance invitation message:</span></td>
             <td>
                 <select name="new_functions_alliance_invitation">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -295,8 +297,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">New Alliance & Embassy Mechanics:</span></td>
             <td>
                 <select name="new_functions_embassy_mechanics">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -304,8 +306,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">New forum post message:</span></td>
             <td>
                 <select name="new_functions_forum_post_message">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -313,8 +315,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Tribes images in profile:</span></td>
             <td>
                 <select name="new_functions_tribe_images">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -322,8 +324,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">MHs images in profile:</span></td>
             <td>
                 <select name="new_functions_mhs_images">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -331,8 +333,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Display artifact in profile:</span></td>
             <td>
                 <select name="new_functions_display_artifact">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -340,8 +342,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Display wonder in profile:</span></td>
             <td>
                 <select name="new_functions_display_wonder">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -349,8 +351,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Vacation Mode:</span></td>
             <td>
                 <select name="new_functions_vacation">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -358,8 +360,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Catapult targets:</span></td>
             <td>
                 <select name="new_functions_display_catapult_target">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -376,8 +378,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Direct links placement:</span></td>
             <td>
                 <select name="new_functions_display_links">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -385,8 +387,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Medal Veteran Player:</span></td>
             <td>
                 <select name="new_functions_medal_3year">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -394,8 +396,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Medal Veteran Player 5a:</span></td>
             <td>
                 <select name="new_functions_medal_5year">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -403,8 +405,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Medal Veteran Player 10a:</span></td>
             <td>
                 <select name="new_functions_medal_10year">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true" selected="selected">true</option>
+                    <option value="false">false</option>
                 </select>
             </td>
         </tr>
@@ -466,13 +468,13 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         <tr>
             <td><span class="f9 c6">Your PayPal E-Mail Address:</span>
             <br />(must be either <b>Business</b> or <b>Premier</b> account)</td>
-            <td><input type="text" name="paypal-email" id="paypal-email" value="@"></td>
+            <td><input type="text" name="paypal-email" id="paypal-email" value="mahdi.abdullah.92@gmail.com"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
             <td><span class="f9 c6">Payment Currency:</span>
             <br />(your PayPal account must be able to receive this currency)</td>
-            <td><input type="text" name="paypal-currency" id="paypal-currency" value="EUR"></td>
+            <td><input type="text" name="paypal-currency" id="paypal-currency" value="IDR"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -481,7 +483,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td><span class="f9 c6">Package "A" Price:</span></td>
-            <td><input type="text" name="plus-a-price" id="plus-a-price" value="1,99"></td>
+            <td><input type="text" name="plus-a-price" id="plus-a-price" value="6000"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -490,7 +492,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td><span class="f9 c6">Package "B" Price:</span></td>
-            <td><input type="text" name="plus-b-price" id="plus-b-price" value="4,99"></td>
+            <td><input type="text" name="plus-b-price" id="plus-b-price" value="12000"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -499,7 +501,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td><span class="f9 c6">Package "C" Price:</span></td>
-            <td><input type="text" name="plus-c-price" id="plus-c-price" value="9,99"></td>
+            <td><input type="text" name="plus-c-price" id="plus-c-price" value="36000"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -508,7 +510,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td><span class="f9 c6">Package "D" Price:</span></td>
-            <td><input type="text" name="plus-d-price" id="plus-d-price" value="19,99"></td>
+            <td><input type="text" name="plus-d-price" id="plus-d-price" value="100000"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -517,21 +519,21 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td><span class="f9 c6">Package "E" Price:</span></td>
-            <td><input type="text" name="plus-e-price" id="plus-e-price" value="49,99"></td>
+            <td><input type="text" name="plus-e-price" id="plus-e-price" value="200000"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
             <td><span class="f9 c6">Plus account length:</span></td>
             <td>
                 <select name="plus_time">
-                    <option value="(3600*12)">12 hours</option>
+                    <option value="(3600*12)" selected="selected">12 hours</option>
                     <option value="(3600*24)">1 day</option>
                     <option value="(3600*24*2)">2 days</option>
                     <option value="(3600*24*3)">3 days</option>
                     <option value="(3600*24*4)">4 days</option>
                     <option value="(3600*24*5)">5 days</option>
                     <option value="(3600*24*6)">6 days</option>
-                    <option value="(3600*24*7)" selected="selected">7 days</option>
+                    <option value="(3600*24*7)">7 days</option>
                 </select>
             </td>
         </tr>
@@ -539,14 +541,14 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">+25% production length:</span></td>
             <td>
                 <select name="plus_production">
-                    <option value="(3600*12)">12 hours</option>
+                    <option value="(3600*12)" selected="selected">12 hours</option>
                     <option value="(3600*24)">1 day</option>
                     <option value="(3600*24*2)">2 days</option>
                     <option value="(3600*24*3)">3 days</option>
                     <option value="(3600*24*4)">4 days</option>
                     <option value="(3600*24*5)">5 days</option>
                     <option value="(3600*24*6)">6 days</option>
-                    <option value="(3600*24*7)" selected="selected">7 days</option>
+                    <option value="(3600*24*7)">7 days</option>
                 </select>
             </td>
         </tr>
@@ -684,8 +686,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Quest Type:</span></td>
             <td>
                 <select name="qtype">
-                    <option value="25" selected="selected">Official Travian</option>
-                    <option value="37">TravianZ Extended</option>
+                    <option value="25">Official Travian</option>
+                    <option value="37" selected="selected">TravianZ Extended</option>
                 </select>
             </td>
         </tr>
@@ -727,8 +729,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Village Expand:</span></td>
             <td>
                 <select name="village_expand">
-                    <option value="1" selected="selected">Slow</option>
-                    <option value="0">Fast</option>
+                    <option value="1">Slow</option>
+                    <option value="0" selected="selected">Fast</option>
                 </select>
             </td>
         </tr>

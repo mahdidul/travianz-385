@@ -1,5 +1,5 @@
 <div id="content"  class="map">
-<?php 
+<?php
 $basearray = $database->getMInfo($_GET['d']);
 $uinfo = $database->getVillage($basearray['id']);
 $oasis1 = mysqli_query($database->dblink,'SELECT conqured, owner FROM `' . TB_PREFIX . 'odata` WHERE `wref` = ' . mysqli_real_escape_string($database->dblink,$_GET['d']));
@@ -137,7 +137,7 @@ if($oasis['owner'] == 2){
         		}
         		echo '<tr>';
         		echo '<td class="ico"><img class="unit u'.$i.'" src="img/x.gif" alt="'.$unarray[$i].'" title="'.$unarray[$i].'" /></td>';
-        		echo '<td class="val">'.$unit['u'.$i].'</td>';
+        		echo '<td class="val">'.number_format_short($unit['u'.$i]).'</td>';
         		echo '<td class="desc">'.$unarray[$i].'</td>';
         		echo '</tr>';
         		$troopsPresent = true;

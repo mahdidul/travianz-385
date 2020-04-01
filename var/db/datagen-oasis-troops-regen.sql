@@ -40,16 +40,16 @@ SET @noVillage = ((SELECT id FROM %PREFIX%oids LIMIT 1) = -1);
 SET @firstVillage = (SELECT id FROM %PREFIX%oids LIMIT 1);
 
 -- minimum and maximum number of units for oasis with "high" field set to 0
-SET @minUnitsForOasis0 = 15 * %NATURE_REG_TIME%;
-SET @maxUnitsForOasis0 = 30 * %NATURE_REG_TIME%;
+SET @minUnitsForOasis0 = 15 * @natureRegTime;
+SET @maxUnitsForOasis0 = 30 * @natureRegTime;
 
 -- minimum and maximum number of units for oasis with "high" field set to 1
-SET @minUnitsForOasis1 = 50 * %NATURE_REG_TIME%;
-SET @maxUnitsForOasis1 = 70 * %NATURE_REG_TIME%;
+SET @minUnitsForOasis1 = 50 * @natureRegTime;
+SET @maxUnitsForOasis1 = 70 * @natureRegTime;
 
 -- minimum and maximum number of units for oasis with "high" field set to 2
-SET @minUnitsForOasis2 = 90 * %NATURE_REG_TIME%;
-SET @maxUnitsForOasis2 = 120 * %NATURE_REG_TIME%;
+SET @minUnitsForOasis2 = 90 * @natureRegTime;
+SET @maxUnitsForOasis2 = 120 * @natureRegTime;
 
 
 
@@ -109,9 +109,9 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u.u35 = u.u35 + (FLOOR(5 + RAND() * 10)),
-        u36 = u36 + (FLOOR(0 + RAND() * 5)),
-        u37 = u37 + (FLOOR(0 + RAND() * 5))
+        u.u35 = u.u35 + (FLOOR(5 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u36 = u36 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u37 = u37 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime))
     WHERE
         (
             (
@@ -163,11 +163,11 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u35 = u35 + (FLOOR(5 + RAND() * 15)),
-        u36 = u36 + (FLOOR(0 + RAND() * 5)),
-        u37 = u37 + (FLOOR(0 + RAND() * 5)),
-        u38 = u38 + (FLOOR(0 + RAND() * 5)),
-        u40 = u40 + (FLOOR(0 + RAND() * 3))
+        u35 = u35 + (FLOOR(5 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u36 = u36 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u37 = u37 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u38 = u38 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u40 = u40 + (FLOOR(0 * @natureRegTime + RAND() * 3 * @natureRegTime))
     WHERE
         (
             (
@@ -219,9 +219,9 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u31 = u31 + (FLOOR(10 + RAND() * 15)),
-        u32 = u32 + (FLOOR(5 + RAND() * 15)),
-        u35 = u35 + (FLOOR(0 + RAND() * 10))
+        u31 = u31 + (FLOOR(10 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u32 = u32 + (FLOOR(5 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u35 = u35 + (FLOOR(0 * @natureRegTime + RAND() * 10 * @natureRegTime))
     WHERE
         (
             (
@@ -270,10 +270,10 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u31 = u31 + (FLOOR(15 + RAND() * 20)),
-        u32 = u32 + (FLOOR(10 + RAND() * 15)),
-        u35 = u35 + (FLOOR(0 + RAND() * 10)),
-        u40 = u40 + (FLOOR(0 + RAND() * 3))
+        u31 = u31 + (FLOOR(15 * @natureRegTime + RAND() * 20 * @natureRegTime)),
+        u32 = u32 + (FLOOR(10 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u35 = u35 + (FLOOR(0 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u40 = u40 + (FLOOR(0 * @natureRegTime + RAND() * 3 * @natureRegTime))
     WHERE
         (
             (
@@ -322,9 +322,9 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u31 = u31 + (FLOOR(10 + RAND() * 15)),
-        u32 = u32 + (FLOOR(5 + RAND() * 15)),
-        u34 = u34 + (FLOOR(0 + RAND() * 10))
+        u31 = u31 + (FLOOR(10 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u32 = u32 + (FLOOR(5 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u34 = u34 + (FLOOR(0 * @natureRegTime + RAND() * 10 * @natureRegTime))
     WHERE
         (
             (
@@ -373,10 +373,10 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u31 = u31 + (FLOOR(15 + RAND() * 20)),
-        u32 = u32 + (FLOOR(10 + RAND() * 15)),
-        u34 = u34 + (FLOOR(0 + RAND() * 10)),
-        u39 = u39 + (FLOOR(0 + RAND() * 3))
+        u31 = u31 + (FLOOR(15 * @natureRegTime + RAND() * 20 * @natureRegTime)),
+        u32 = u32 + (FLOOR(10 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u34 = u34 + (FLOOR(0 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u39 = u39 + (FLOOR(0 * @natureRegTime + RAND() * 3 * @natureRegTime))
     WHERE
         (
             (
@@ -425,11 +425,11 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u31 = u31 + (FLOOR(5 + RAND() * 15)),
-        u33 = u33 + (FLOOR(5 + RAND() * 10)),
-        u37 = u37 + (FLOOR(0 + RAND() * 10)),
-        u38 = u38 + (FLOOR(0 + RAND() * 5)),
-        u39 = u39 + (FLOOR(0 + RAND() * 5))
+        u31 = u31 + (FLOOR(5 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u33 = u33 + (FLOOR(5 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u37 = u37 + (FLOOR(0 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u38 = u38 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u39 = u39 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime))
     WHERE
         (
             (
@@ -485,12 +485,12 @@ UPDATE %PREFIX%units u
     JOIN %PREFIX%odata o
     ON u.vref = o.wref
     SET
-        u31 = u31 + (FLOOR(10 + RAND() * 15)),
-        u33 = u33 + (FLOOR(5 + RAND() * 10)),
-        u37 = u37 + (FLOOR(0 + RAND() * 10)),
-        u38 = u38 + (FLOOR(0 + RAND() * 5)),
-        u39 = u39 + (FLOOR(0 + RAND() * 5)),
-        u40 = u40 + (FLOOR(0 + RAND() * 3))
+        u31 = u31 + (FLOOR(10 * @natureRegTime + RAND() * 15 * @natureRegTime)),
+        u33 = u33 + (FLOOR(5 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u37 = u37 + (FLOOR(0 * @natureRegTime + RAND() * 10 * @natureRegTime)),
+        u38 = u38 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u39 = u39 + (FLOOR(0 * @natureRegTime + RAND() * 5 * @natureRegTime)),
+        u40 = u40 + (FLOOR(0 * @natureRegTime + RAND() * 3 * @natureRegTime))
     WHERE
         (
             (
