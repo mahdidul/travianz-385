@@ -39,7 +39,7 @@ for($i=3;$i<=12;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 echo "<tr><th>Casualties</th>";
@@ -48,7 +48,7 @@ for($i=13;$i<=22;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 
@@ -82,7 +82,7 @@ if ($dataarray[143]!='' and $dataarray[144]!=''){ //chief
     </td></tr></tbody>
 <?php } ?>
 	<tbody class="goods"><tr><th>Bounty</th><td colspan="10">
-	<div class="res"><img class="r1" src="img/x.gif" alt="Lumber" title="Lumber" /><?php echo $dataarray[23]; ?> | <img class="r2" src="img/x.gif" alt="Clay" title="Clay" /><?php echo $dataarray[24]; ?> | <img class="r3" src="img/x.gif" alt="Iron" title="Iron" /><?php echo $dataarray[25]; ?> | <img class="r4" src="img/x.gif" alt="Crop" title="Crop" /><?php echo $dataarray[26]; ?></div><div class="carry"><img class="car" src="img/x.gif" alt="carry" title="carry" /><?php echo ($dataarray[23]+$dataarray[24]+$dataarray[25]+$dataarray[26])."/".$dataarray[27]; ?></div>
+	<div class="res"><img class="r1" src="img/x.gif" alt="Lumber" title="Lumber" /><?php echo number_format_short($dataarray[23]); ?> | <img class="r2" src="img/x.gif" alt="Clay" title="Clay" /><?php echo number_format_short($dataarray[24]); ?> | <img class="r3" src="img/x.gif" alt="Iron" title="Iron" /><?php echo number_format_short($dataarray[25]); ?> | <img class="r4" src="img/x.gif" alt="Crop" title="Crop" /><?php echo number_format_short($dataarray[26]); ?></div><div class="carry"><img class="car" src="img/x.gif" alt="carry" title="carry" /><?php echo number_format_short(($dataarray[23]+$dataarray[24]+$dataarray[25]+$dataarray[26]))."/".number_format_short($dataarray[27]); ?></div>
     </td></tr></tbody></table>
 	
 <?php
@@ -112,7 +112,7 @@ for($i=35;$i<=44;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 echo "<tr><th>Casualties</th>";
@@ -121,7 +121,7 @@ for($i=45;$i<=54;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 ?>
@@ -151,7 +151,7 @@ for($i=56;$i<=65;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 echo "<tr><th>Casualties</th>";
@@ -160,7 +160,7 @@ for($i=66;$i<=75;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 ?>
@@ -189,7 +189,7 @@ for($i=77;$i<=86;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 echo "<tr><th>Casualties</th>";
@@ -198,7 +198,7 @@ for($i=87;$i<=96;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 ?>
@@ -228,7 +228,7 @@ for($i=98;$i<=107;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 echo "<tr><th>Casualties</th>";
@@ -237,7 +237,7 @@ for($i=108;$i<=117;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 ?>
@@ -267,7 +267,7 @@ for($i=119;$i<=128;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 echo "<tr><th>Casualties</th>";
@@ -276,7 +276,7 @@ for($i=129;$i<=138;$i++) {
     	echo "<td class=\"none\">0</td>";
     }
     else {
-    	echo "<td>".$dataarray[$i]."</td>";
+    	echo "<td>".number_format_short($dataarray[$i])."</td>";
     }
 }
 ?>

@@ -28,6 +28,7 @@ include_once("Generator.php");
 include_once("Multisort.php");
 include_once("Building.php");
 include_once("Artifacts.php");
+include_once("tools/short_number_format.php");
 
 class Automation {
 
@@ -2174,11 +2175,11 @@ class Automation {
 
                     if(!empty($scout)) {
                         if ($data['spy'] == 1){
-                            $info_spy = "".$spy_pic.",<div class=\"res\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"Lumber\" />".round($totwood)." |
-				 <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"Clay\" />".round($totclay)." |
-				 <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"Iron\" />".round($totiron)." |
-				 <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"Crop\" />".round($totcrop)."</div>
-				 <div class=\"carry\"><img class=\"car\" src=\"img/x.gif\" alt=\"carry\" title=\"carry\" />Total Resources: ".round($totwood+$totclay+$totiron+$totcrop)."</div>
+                            $info_spy = "".$spy_pic.",<div class=\"res\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"Lumber\" />".number_format_short(round($totwood))." |
+				 <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"Clay\" />".number_format_short(round($totclay))." |
+				 <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"Iron\" />".number_format_short(round($totiron))." |
+				 <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"Crop\" />".number_format_short(round($totcrop))."</div>
+				 <div class=\"carry\"><img class=\"car\" src=\"img/x.gif\" alt=\"carry\" title=\"carry\" />Total Resources: ".number_format_short(round($totwood+$totclay+$totiron+$totcrop))."</div>
 	";
                         }else if($data['spy'] == 2){
                             if ($isoasis == 0){

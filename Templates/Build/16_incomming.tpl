@@ -1,5 +1,6 @@
 <?php
 include_once("GameEngine/Data/unitdata.php");
+include_once("tools/short_number_format.php");
 
 $units = $database->getMovement(34, $village->wid, 1);
 $total_for = count($units);

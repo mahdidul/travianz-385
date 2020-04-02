@@ -46,7 +46,7 @@ error_reporting(0);
 								}
 								else
 								{
-									echo "<td>".$dataarray[$i]."</td>";
+									echo "<td>".number_format_short($dataarray[$i])."</td>";
 								}
 							}
 							echo "</tr><tr><th style=\"color: black;\">Casualties</th>";
@@ -58,7 +58,7 @@ error_reporting(0);
 								}
 								else
 								{
-									echo "<td>".$dataarray[$i]."</td>";
+									echo "<td>".number_format_short($dataarray[$i])."</td>";
 								}
 							}
 							echo "</tr></tbody>";
@@ -122,7 +122,7 @@ error_reporting(0);
 										<th style="color: black;">Bounty</th>
 										<td colspan="10">
 											<div class="res">
-												<img class="r1" src="../img/x.gif" alt="Lumber" title="Lumber" /><?php echo $dataarray[23]; ?> | <img class="r2" src="../img/x.gif" alt="Clay" title="Clay" /><?php echo $dataarray[24]; ?> | <img class="r3" src="../img/x.gif" alt="Iron" title="Iron" /><?php echo $dataarray[25]; ?> | <img class="r4" src="../img/x.gif" alt="Crop" title="Crop" /><?php echo $dataarray[26]; ?></div><div class="carry"><img class="car" src="../img/x.gif" alt="carry" title="carry" /><?php echo ($dataarray[23]+$dataarray[24]+$dataarray[25]+$dataarray[26])."/".$dataarray[27]; ?>
+												<img class="r1" src="../img/x.gif" alt="Lumber" title="Lumber" /><?php echo number_format_short($dataarray[23]); ?> | <img class="r2" src="../img/x.gif" alt="Clay" title="Clay" /><?php echo number_format_short($dataarray[24]); ?> | <img class="r3" src="../img/x.gif" alt="Iron" title="Iron" /><?php echo number_format_short($dataarray[25]); ?> | <img class="r4" src="../img/x.gif" alt="Crop" title="Crop" /><?php echo number_format_short($dataarray[26]); ?></div><div class="carry"><img class="car" src="../img/x.gif" alt="carry" title="carry" /><?php echo number_format_short(($dataarray[23]+$dataarray[24]+$dataarray[25]+$dataarray[26]))."/".number_format_short($dataarray[27]); ?>
 											</div>
 										</td>
 									</tr>
@@ -158,7 +158,7 @@ error_reporting(0);
 														}
 														else
 														{
-															echo "<td>".$dataarray[$i]."</td>";
+															echo "<td>".number_format_short($dataarray[$i])."</td>";
 														}
 													}
 													echo "</tr><tr><th style=\"color: black;\">Casualties</th>";
@@ -170,7 +170,7 @@ error_reporting(0);
 														}
 														else
 														{
-															echo "<td>".$dataarray[$i]."</td>";
+															echo "<td>".number_format_short($dataarray[$i])."</td>";
 														}
 													}
 													?>
@@ -205,7 +205,7 @@ error_reporting(0);
 														}
 														else
 														{
-															echo "<td>".$dataarray[$i]."</td>";
+															echo "<td>".number_format_short($dataarray[$i])."</td>";
 														}
 													}
 													echo "</tr><tr><th style=\"color: black;\">Casualties</th>";
@@ -217,7 +217,7 @@ error_reporting(0);
 														}
 														else
 														{
-															echo "<td>".$dataarray[$i]."</td>";
+															echo "<td>".number_format_short($dataarray[$i])."</td>";
 														}
 													}
 												?>
@@ -252,7 +252,7 @@ error_reporting(0);
 													}
 													else
 													{
-														echo "<td>".$dataarray[$i]."</td>";
+														echo "<td>".number_format_short($dataarray[$i])."</td>";
 													}
 												}
 												echo "</tr><tr><th style=\"color: black;\">Casualties</th>";
@@ -264,7 +264,7 @@ error_reporting(0);
 													}
 													else
 													{
-														echo "<td>".$dataarray[$i]."</td>";
+														echo "<td>".number_format_short($dataarray[$i])."</td>";
 													}
 												}
 											?>
@@ -299,7 +299,7 @@ error_reporting(0);
 													}
 													else
 													{
-														echo "<td>".$dataarray[$i]."</td>";
+														echo "<td>".number_format_short($dataarray[$i])."</td>";
 													}
 												}
 												echo "</tr><tr><th style=\"color: black;\">Casualties</th>";
@@ -311,7 +311,7 @@ error_reporting(0);
 													}
 													else
 													{
-														echo "<td>".$dataarray[$i]."</td>";
+														echo "<td>".number_format_short($dataarray[$i])."</td>";
 													}
 												}
 											?>
@@ -346,7 +346,7 @@ error_reporting(0);
 													}
 													else
 													{
-														echo "<td>".$dataarray[$i]."</td>";
+														echo "<td>".number_format_short($dataarray[$i])."</td>";
 													}
 												}
 												echo "</tr><tr><th style=\"color: black;\">Casualties</th>";
@@ -358,7 +358,7 @@ error_reporting(0);
 													}
 													else
 													{
-														echo "<td>".$dataarray[$i]."</td>";
+														echo "<td>".number_format_short($dataarray[$i])."</td>";
 													}
 												}
 											?>

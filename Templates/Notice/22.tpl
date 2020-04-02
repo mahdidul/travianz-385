@@ -51,7 +51,7 @@ echo "</tr><tr><th>Troops</th>";
 
 for($i = 4; $i <= 13; $i++) {
     if($dataarray[$i] == 0) echo "<td class=\"none\">0</td>";
-    else echo "<td>".$dataarray[$i]."</td>";
+    else echo "<td>".number_format_short($dataarray[$i])."</td>";
 }
 
 if(isset($dataarray[14]) && $dataarray[14] > 0){

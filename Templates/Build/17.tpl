@@ -260,7 +260,7 @@ echo "<h4>".MERCHANT_COMING.":</h4>";
     }
     echo "".AT." ".$datetime[1]."</div>";
     echo "</td></tr></tbody> <tr class=\"res\"> <th>".RESOURCES."</th> <td colspan=\"2\"><span class=\"f10\">";
-    echo "<img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"".LUMBER."\" />".$recieve['wood']." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"".CLAY."\" />".$recieve['clay']." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"".IRON."\" />".$recieve['iron']." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"".CROP."\" />".$recieve['crop']."</td></tr></tbody>";
+    echo "<img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"".LUMBER."\" />".number_format_short($recieve['wood'])." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"".CLAY."\" />".number_format_short($recieve['clay'])." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"".IRON."\" />".number_format_short($recieve['iron'])." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"".CROP."\" />".number_format_short($recieve['crop'])."</td></tr></tbody>";
     echo "</table>";
     }
 }
@@ -281,7 +281,7 @@ if(count($market->sending) > 0) {
         }
         echo "".AT." ".$datetime[1]."</div>";
         echo "</td> </tr> <tr class=\"res\"> <th>".RESOURCES."</th><td>";
-        echo "<img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"".LUMBER."\" />".$send['wood']." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"".CLAY."\" />".$send['clay']." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"".IRON."\" />".$send['iron']." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"".CROP."\" />".$send['crop']."</td></tr></tbody>";
+        echo "<img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"".LUMBER."\" />".number_format_short($send['wood'])." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"".CLAY."\" />".number_format_short($send['clay'])." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"".IRON."\" />".number_format_short($send['iron'])." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"".CROP."\" />".number_format_short($send['crop'])."</td></tr></tbody>";
         echo "</table>";
     }
 }

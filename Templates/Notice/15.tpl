@@ -59,7 +59,7 @@ if(isset($dataarray[24]) && $dataarray[24] > 0){
 echo "</tr><tr><th>Troops</th>";
 for($i = 4; $i <= 13; $i++) {
     if($dataarray[$i] == 0) echo "<td class=\"none\">0</td>";
-    else echo "<td>".$dataarray[$i]."</td>";
+    else echo "<td>".number_format_short($dataarray[$i])."</td>";
 }
 if(isset($dataarray[24]) && $dataarray[24] > 0){
 	echo "<td>$dataarray[24]</td>";
@@ -68,7 +68,7 @@ if(isset($dataarray[24]) && $dataarray[24] > 0){
 echo "<tr><th>Casualties</th>";
 for($i = 14; $i <= 23; $i++) {
     if($dataarray[$i] == 0) echo "<td class=\"none\">0</td>";
-    else echo "<td>".$dataarray[$i]."</td>";
+    else echo "<td>".number_format_short($dataarray[$i])."</td>";
 }
 if(isset($dataarray[24]) && $dataarray[24] > 0){
 	if ($dataarray[25] == 0) $tdclass = 'class="none"';

@@ -56,7 +56,7 @@ for($i = 3; $i < 13; $i++) {
     $unitarray['u'.($i - 3 + $start)] = $dataarray[$i];
 
     if($dataarray[$i] == 0) echo "<td class=\"none\">0</td>"; 
-    else echo "<td>".$dataarray[$i]."</td>";
+    else echo "<td>".number_format_short($dataarray[$i])."</td>";
 
 }
 if($dataarray[13] > 0) {
@@ -66,6 +66,6 @@ if($dataarray[13] > 0) {
 	
 ?></tr></tbody>
 <tbody class="infos"><tr><th>upkeep</th><td colspan="11">
-<?php echo $technology->getUpkeep($unitarray, $dataarray[2]); ?><img src="img/x.gif" class="r4" title="Crop" alt="Crop" />per hour</td>
+<?php echo number_format_short($technology->getUpkeep($unitarray, $dataarray[2])); ?><img src="img/x.gif" class="r4" title="Crop" alt="Crop" />per hour</td>
 </tr></tbody>
 </table></td></tr></tbody></table>
